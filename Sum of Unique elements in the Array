@@ -1,0 +1,21 @@
+
+
+// it is very simple for this we use X-OR gate operation for each elements in the array
+
+// code
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,uni;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(i=1,uni=arr[0];arr[i];uni^=arr[i],i++);
+    printf("%d",uni);
+
+    return 0;
+}
